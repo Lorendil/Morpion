@@ -1,3 +1,11 @@
+def grille(listecases = []):
+    print("\n",listecases[1],"|",listecases[2],"|",listecases[3], end=" ")
+    print("\n", "-  ", "-  ", "-  ", end=" ")
+    print("\n",listecases[4],"|",listecases[5], "|",listecases[6], end=" ")
+    print("\n", "-  ", "-  ", "-  ", end=" ")
+    print("\n",listecases[7], "|",listecases[8], "|",listecases[9], end=" ")
+
+
 listecases = [0,1,2,3, 4,5,6, 7,8,9,10]
 cj = 0
 
@@ -7,11 +15,9 @@ j2 = input("Nom du joueur 2 \n")
 
 print("\n", "Indiquez quelle case remplacer en rentrant son chiffre. Une fois 3 cases alignées slectionnées, vous remportez la partie")
 
-print("\n",listecases[1],"|",listecases[2],"|",listecases[3], end=" ")
-print("\n", "-  ", "-  ", "-  ", end=" ")
-print("\n",listecases[4],"|",listecases[5], "|",listecases[6], end=" ")
-print("\n", "-  ", "-  ", "-  ", end=" ")
-print("\n",listecases[7], "|",listecases[8], "|",listecases[9], end=" ")
+
+
+grille(listecases)
 
 #Il y a 9 cases possibles donc on arrête quand il y a 9 cases jouées
 while(cj < 9):
@@ -49,11 +55,8 @@ while(cj < 9):
     cj = cj + 1
 
     #On imprime le statut de la partie
-    print("\n",listecases[1],"|",listecases[2],"|",listecases[3], end=" ")
-    print("\n", "-  ", "-  ", "-  ", end=" ")
-    print("\n",listecases[4],"|",listecases[5], "|",listecases[6], end=" ")
-    print("\n", "-  ", "-  ", "-  ", end=" ")
-    print("\n",listecases[7], "|",listecases[8], "|",listecases[9], end=" ")
+    
+    grille(listecases)
 
     #On vérifie qu'une ligne n'est pas remplis
     if(listecases[1] == v) and (listecases[2] == v) and (listecases[3] == v) :
