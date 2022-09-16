@@ -1,8 +1,8 @@
 listecases = [0,1,2,3, 4,5,6, 7,8,9,10]
 cj = 0
 
-j1 = input("Nom du joueur 1")
-j2 = input("Nom du joueur 2")
+j1 = input("Nom du joueur 1 \n")
+j2 = input("Nom du joueur 2 \n")
 
 
 print("\n", "Indiquez quelle case remplacer en rentrant son chiffre. Une fois 3 cases alignées slectionnées, vous remportez la partie")
@@ -26,11 +26,11 @@ while(cj < 9):
         case = int(input())
 
     #On vérifie que la case est possible
-    while(case != listecases[c]):
+    while(case != listecases[c]) or (case == 0) or (case == 10):
         
         #Si la case n'est pas possible, on demande de choisir une autre case et on recommence la vérification
-        if(c > 9):
-            case = int(input("Vous ne pouvez pas jouer sur cette case, choisissez une autre case"))
+        if(c > 9) or (case == 0) or (case == 10):
+            case = int(input("Vous ne pouvez pas jouer sur cette case, choisissez une autre case \n"))
             c = 0
 
         c = c +1
@@ -81,5 +81,5 @@ while(cj < 9):
         print("\n", j, "a gagné !")
         cj = 10
     if(cj == 9) :
-        print("C'est un match nul")
+        print("\n C'est un match nul")
     
